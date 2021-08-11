@@ -1,13 +1,47 @@
-//
-//  AppDelegate.swift
-//  AppLifeCycle
-//
-//  Created by 임영선 on 2021/08/10.
-//
+## 📒 섹션 6 - 앱 생명주기(App Life Cycle)
 
-import UIKit
+### 📌 강의 핵심
 
-@main
+#### 🔍 ViewController 생명 주기
+
+<img src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile26.uf.tistory.com%2Fimage%2F2613D13C58C64DE32C838B">
+
+```swift
+class ViewController: UIViewController {
+
+    //view가 올라오고 나서 바로 호출 -> 1번 호출
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    //view가 나타나기 전에 호출
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+    }
+    
+    //view가 나타나고 나서 호출
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+    }
+    //view가 사라지기 전에 호출
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisappear")
+    }
+    
+    //view가 사라지고 나서 호출
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear")
+    }
+
+}
+```
+
+
+
+#### 🔍 앱 생명주기
+
+```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -43,20 +77,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("applicationDidEnterBackground")
     }
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
-}
+```
 
