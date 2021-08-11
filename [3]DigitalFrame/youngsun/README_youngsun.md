@@ -37,7 +37,7 @@
 
 ### 📌 강의 핵심
 
-#### imageView animation 관련 메소드
+#### 🔍 imageView animation 관련 메소드
 
 ```swift
 imgView.animationImages = cuteImages //애니메이션을 만들 이미지 배열을 넣음
@@ -50,7 +50,7 @@ if imgView.isAnimating{ //animating하고 있다면
 
 
 
-#### format으로 소수점자리 출력
+#### 🔍 format으로 소수점자리 출력
 
 ```swift
 speedLabel.text = String(format: "%.2f", speedSlider.value) //소수점 둘쨋자리까지만 
