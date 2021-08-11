@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                           ]
         
         imgView.animationImages = cuteImages
-        imgView.animationDuration = 15
+        imgView.animationDuration = 15  // 한 Cycle당 걸리는 시간, 사진이 15개 있으므로 사진 한장당 1초
         speedLabel.text = String(format: "%.2f", speedSlider.value)
     }
     
@@ -76,6 +76,7 @@ class ViewController: UIViewController {
 
 #### animationDuration
 - Stored property이며, 애니메이션 속도를 담고 있다.
+- 이미지의 한 Cycle를 거치는 데 걸리는 시간
 
 #### isAnimating
 - Method이며, 애니메이션 시작 유무를 Bool 타입으로 반환한다.
