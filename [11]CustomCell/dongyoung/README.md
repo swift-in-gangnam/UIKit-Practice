@@ -1,4 +1,4 @@
-# WeatherTable
+# CustomCell
 
 - `Navigation Controller` 기반의 Application
 
